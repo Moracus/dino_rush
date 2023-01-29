@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://particles/leaf1.png" type="Texture" id=1]
+[ext_resource path="res://particles/Leaf.gd" type="Script" id=2]
+
+[sub_resource type="Curve" id=1]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, -205.704 ), 0.0, 0.0, 0, 0, Vector2( 0.988764, 357.205 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 384, 0, 0 )
+flag_disable_z = true
+gravity = Vector3( -120, 50, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 101.8
+angle_random = 0.61
+angle_curve = SubResource( 2 )
+
+[node name="Leaf" type="Particles2D"]
+position = Vector2( 285, -70 )
+scale = Vector2( 0.5, 0.5 )
+emitting = false
+amount = 4
+lifetime = 5.0
+process_material = SubResource( 3 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
