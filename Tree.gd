@@ -10,7 +10,7 @@ func _physics_process(delta):
 
 func _on_Tree_body_entered(body):
 	if body is Player:
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://UI/EndScreen.tscn")
 
 #
 func _on_VisibilityNotifier2D_screen_exited():
