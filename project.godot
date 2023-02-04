@@ -24,6 +24,10 @@ config/name="dinorunv2"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SaveFile="*res://save_file.gd"
+
 [display]
 
 window/size/width=384
