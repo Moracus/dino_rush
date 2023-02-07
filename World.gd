@@ -4,8 +4,8 @@ extends ParallaxBackground
 # Declare member variables here. Examples:
 # var a = 2
 
-var backspeed = 200
-var accn =5
+var backspeed = 500
+var accn = 2
 var obstacle1 = preload("res://Cactus01.tscn")
 var obstacle2 = preload("res://Cactus02.tscn")
 var obstacle3 = preload("res://Tree.tscn")

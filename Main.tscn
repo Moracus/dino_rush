@@ -1,17 +1,28 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://parallax background/forest.png" type="Texture" id=1]
 [ext_resource path="res://UI/TitleScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Bongo-8 Mono.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
 [ext_resource path="res://UI/Highscore.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=5]
+size = 10
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=4]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 4 )
@@ -19,6 +30,25 @@ script = ExtResource( 4 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
+
+[node name="Highscore" parent="." instance=ExtResource( 5 )]
+
+[node name="HBoxContainer" parent="Highscore" index="0"]
+margin_left = -149.0
+margin_top = -16.0
+margin_right = -32.0
+margin_bottom = -2.0
+
+[node name="String" parent="Highscore/HBoxContainer" index="0"]
+margin_top = 1.0
+margin_bottom = 12.0
+
+[node name="Counter" parent="Highscore/HBoxContainer" index="1"]
+margin_top = 1.0
+margin_right = 114.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 5 )
+text = "0"
 
 [node name="TitleScreen" parent="." instance=ExtResource( 2 )]
 
@@ -30,6 +60,10 @@ margin_bottom = 52.0
 
 [node name="Main" parent="TitleScreen/Margins" index="0"]
 margin_bottom = 33.0
+
+[node name="Title" parent="TitleScreen/Margins/Main" index="0"]
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 1 )
 
 [node name="Start" parent="TitleScreen/Margins/Main/Title" index="0"]
 margin_top = 73.0
@@ -44,26 +78,12 @@ margin_bottom = 145.0
 custom_colors/font_color_pressed = Color( 0.796078, 0.752941, 0.752941, 1 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/disabled = SubResource( 7 )
 custom_styles/normal = SubResource( 4 )
-
-[node name="Highscore" parent="." instance=ExtResource( 5 )]
-
-[node name="HBoxContainer" parent="Highscore" index="0"]
-margin_left = 176.0
-margin_top = 69.0
-margin_right = 344.0
-margin_bottom = 109.0
-custom_constants/separation = 5
-
-[node name="String" parent="Highscore/HBoxContainer" index="0"]
-custom_styles/normal = SubResource( 5 )
-
-[node name="Counter" parent="Highscore/HBoxContainer" index="1"]
-margin_left = 135.0
-margin_right = 135.0
 
 [connection signal="pressed" from="TitleScreen/Margins/Main/Title/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="TitleScreen/Margins/Main/Title/Exit" to="." method="_on_Exit_pressed"]
 
-[editable path="TitleScreen"]
 [editable path="Highscore"]
+[editable path="TitleScreen"]
