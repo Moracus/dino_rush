@@ -2,7 +2,7 @@ extends Timer
 
 
 var mintime =1
-var maxtime = 5
+var maxtime = 3
 
 
 # Called when the node enters the scene tree for the first time.
