@@ -19,7 +19,10 @@ font_data = ExtResource( 2 )
 
 [node name="Margins" parent="." index="0"]
 anchor_bottom = 0.0
-margin_bottom = 20.0
+margin_left = 2.0
+margin_top = 18.0
+margin_right = 2.0
+margin_bottom = 38.0
 
 [node name="Main" parent="Margins" index="0"]
 margin_bottom = 18.0
