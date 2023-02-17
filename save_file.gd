@@ -3,9 +3,10 @@ extends Node
 const score_file = "user://score.save"
 var highscore = 0
 var score:int =0
-var accn = 2
+var accn = 5
+var max_accn = 10
 var speed:float= 2.00
-var max_speed = 5
+var max_speed = 10
 func _ready():
 	load_score()
 func save_score(highscore):

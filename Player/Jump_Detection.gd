@@ -17,9 +17,8 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if body is Player:
-		SaveFile.score +=1
-	if SaveFile.score%10 ==0 and SaveFile.score !=0:
-		if SaveFile.speed<SaveFile.max_speed:
-			SaveFile.speed+=1
-		
+
+	SaveFile.score +=1
+#	if SaveFile.score%5 ==0 and SaveFile.score !=0:
+#		if SaveFile.accn < SaveFile.max_accn:
+#			SaveFile.accn += 1

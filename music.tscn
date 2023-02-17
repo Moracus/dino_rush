@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sound/upbeat-funky-retro-131297.mp3" type="AudioStream" id=1]
+[ext_resource path="res://music.gd" type="Script" id=2]
+
+[node name="music" type="Node"]
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+autoplay = true

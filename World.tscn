@@ -55,8 +55,11 @@ show_collision = true
 tile_data = PoolIntArray( 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2( 197, 205 )
 shape = SubResource( 1 )
 
@@ -66,6 +69,9 @@ script = ExtResource( 7 )
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 45, 185 )
 scale = Vector2( 1.25, 1.25 )
+
+[node name="CollisionShape2D" parent="Player" index="1"]
+visible = false
 
 [node name="Leaf" parent="." instance=ExtResource( 11 )]
 position = Vector2( 402, -23 )
@@ -78,4 +84,5 @@ visible = false
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 
+[editable path="Player"]
 [editable path="Score"]

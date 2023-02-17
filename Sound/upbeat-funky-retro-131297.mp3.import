@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/upbeat-funky-retro-131297.mp3-5169ab04694897a9fed3a3a29f72141e.mp3str"
+
+[deps]
+
+source_file="res://Sound/upbeat-funky-retro-131297.mp3"
+dest_files=[ "res://.import/upbeat-funky-retro-131297.mp3-5169ab04694897a9fed3a3a29f72141e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
