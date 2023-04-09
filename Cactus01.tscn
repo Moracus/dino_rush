@@ -11,6 +11,7 @@ height = 88.0
 [node name="Cactus" type="Area2D"]
 scale = Vector2( 0.5, 0.5 )
 z_index = -5
+collision_layer = 4
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

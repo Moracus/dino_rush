@@ -10,6 +10,7 @@ extents = Vector2( 27.5, 42.5 )
 [node name="Cactus02" type="Area2D"]
 scale = Vector2( 0.5, 0.5 )
 z_index = -5
+collision_layer = 4
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
